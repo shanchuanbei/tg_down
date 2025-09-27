@@ -242,8 +242,24 @@ A: 机器人支持断点续传，重新发送文件即可继续下载
 
 如果您觉得这个项目对您有帮助，欢迎赞助支持！
 
-### 赞助
-![微信赞助](images/微信.jpg)![支付宝赞助](images/支付宝.jpg)
+## 💝 赞助支持
+
+如果这个项目对您有帮助，请考虑赞助支持后续开发！
+
+<table>
+<tr>
+<td align="center">
+<strong>微信赞助</strong><br/>
+<img src="images/wechat.jpg" width="200" alt="微信赞助">
+</td>
+<td align="center">
+<strong>支付宝赞助</strong><br/>
+<img src="images/alipay.jpg" width="200" alt="支付宝赞助">
+</td>
+</tr>
+</table>
+
+**感谢您的支持！❤️**
 
 
 
