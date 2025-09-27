@@ -144,16 +144,6 @@ downloads/
 
 ## 🔧 高级配置
 
-### 自定义下载目录
-
-修改脚本中的 `DOWNLOAD_DIR` 变量：
-
-```python
-DOWNLOAD_DIR = "/home/user/telegram_downloads"  # Linux
-DOWNLOAD_DIR = "D:\\TelegramDownloads"         # Windows
-DOWNLOAD_DIR = "/Users/name/Downloads"         # macOS
-```
-
 ### 进度更新频率调整
 
 修改 `update_interval` 值来控制进度更新频率：
