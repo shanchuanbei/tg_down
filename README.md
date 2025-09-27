@@ -1,8 +1,8 @@
 # 🎬 Telegram 大文件下载机器人
-
-> 支持实时进度显示的 Telegram 用户机器人，无文件大小限制，专为大文件传输优化
-> 仅在dibian13和dibian12系统测试过运行完美
-
+```bash
+- 支持实时进度显示的 Telegram 用户机器人，无文件大小限制，专为大文件传输优化
+- 仅在dibian13和dibian12系统测试过运行完美
+```
 ## ✨ 特色功能
 
 ## 无需安装docker，无需下载二进制文件，直接由python脚本驱动，超稳定
@@ -56,6 +56,11 @@ pip3 install --break-system-packages aiofiles aiohttp
 3. **配置参数**
 ```python
 # 在脚本中配置以下参数
+# 脚本存放地址默认在这个目录下/opt/tg_down
+# 用这个命令改写脚本 nano /opt/tg_down/tg.py
+# 用这个命令改写脚本 nano /opt/tg_down/tg.py
+# 用这个命令改写脚本 nano /opt/tg_down/tg.py
+
 API_ID = 1234567                    # 你的 API ID
 API_HASH = "your_api_hash_here"     # 你的 API Hash
 DOWNLOAD_DIR = "/path/to/downloads" # 下载目录
