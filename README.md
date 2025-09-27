@@ -11,6 +11,11 @@
 - **🎯 智能文件名识别** - 自动获取原始文件名
 - **📱 多格式支持** - 支持文档、视频等各种文件类型
 
+⬇️ 存储端支持
+├── 本地磁盘（支持）
+├── WebDAV（暂不支持）
+├── Alist（暂不支持）
+
 ## 📸 界面预览
 
 ```
@@ -31,15 +36,18 @@
 
 ### 安装步骤
 
-1. **克隆仓库**
+1. **下载脚本**
 ```bash
-git clone https://github.com/yourusername/telegram-file-downloader.git
-cd telegram-file-downloader
+sudo mkdir -p /opt/tg_down && cd /opt/tg_down
+wget https://raw.githubusercontent.com/shanchuanbei/tg_down/refs/heads/main/tg.py -O tg.py
 ```
 
 2. **安装依赖**
 ```bash
-pip install telethon
+apt update && apt install -y python3-pip
+pip3 install --break-system-packages "python-telegram-bot==13.15"
+pip3 install --break-system-packages telethon
+pip3 install --break-system-packages aiofiles aiohttp
 ```
 
 3. **配置参数**
@@ -51,9 +59,49 @@ DOWNLOAD_DIR = "/path/to/downloads" # 下载目录
 ```
 
 4. **运行机器人**
+第一次运行需要前台启动 会让你输入机器人API列如：8554455525:esdfhdsajkdqwijhfisajfsiuhufuew
 ```bash
-python tg_downloader.py
+python3 tg.py
 ```
+5. **用systemd后台启动**
+前台启动完成后用ctrl+C结束命令然后一键配置systemd
+```bash
+sudo cat > /etc/systemd/system/tgdown.service << EOF
+[Unit]
+Description=tgdown - 大文件下载器
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/tg_down
+ExecStart=/usr/bin/python3 /opt/tg_down/tg.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
+
+LimitNOFILE=65536
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+启动
+sudo systemctl start tgdown
+停止
+sudo systemctl stop tgdown
+重启
+sudo systemctl restart tgdown
+开机自启
+sudo systemctl enable tgdown
+检查服务状态
+sudo systemctl status tgdown
+查看运行日志
+sudo journalctl -u tgdown -f
 
 ## ⚙️ Telegram API 配置
 
