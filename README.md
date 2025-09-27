@@ -91,17 +91,29 @@ WantedBy=multi-user.target
 EOF
 ```
 启动
+```bash
 sudo systemctl start tgdown
+```
 停止
+```bash
 sudo systemctl stop tgdown
+```
 重启
+```bash
 sudo systemctl restart tgdown
+```
 开机自启
+```bash
 sudo systemctl enable tgdown
+```
 检查服务状态
+```bash
 sudo systemctl status tgdown
+```
 查看运行日志
+```bash
 sudo journalctl -u tgdown -f
+```
 
 ## ⚙️ Telegram API 配置
 
