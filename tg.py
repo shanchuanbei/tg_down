@@ -11,10 +11,10 @@ from telethon import TelegramClient, events
 from telethon.tl.types import DocumentAttributeFilename
 
 # 配置
-API_ID = 23764001
-API_HASH = "e208c4e80e4c45f39e2892d676c9f8ee"
+API_ID = 这里要改
+API_HASH = "这里要改"
 SESSION_NAME = "tgdown"
-DOWNLOAD_DIR = "/mnt/data/nas/TG/TG0924"
+DOWNLOAD_DIR = "这里改成你的服务器绝对路径"
 
 # 创建目录
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
