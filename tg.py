@@ -10,7 +10,7 @@ import logging
 from telethon import TelegramClient, events
 from telethon.tl.types import DocumentAttributeFilename
 
-# 配置
+# 配置（只需要改以下三个内容，其他的不需要动）
 API_ID = 这里要改
 API_HASH = "这里要改"
 SESSION_NAME = "tgdown"
