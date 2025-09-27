@@ -250,11 +250,11 @@ A: 机器人支持断点续传，重新发送文件即可继续下载
 <tr>
 <td align="center">
 <strong>微信赞助</strong><br/>
-<img src="images/wechat.jpg" width="200" alt="微信赞助">
+<img src="images/微信.jpg" width="200" alt="微信赞助">
 </td>
 <td align="center">
 <strong>支付宝赞助</strong><br/>
-<img src="images/alipay.jpg" width="200" alt="支付宝赞助">
+<img src="images/支付宝.jpg" width="200" alt="支付宝赞助">
 </td>
 </tr>
 </table>
